@@ -1,5 +1,41 @@
 import Image from "next/image";
 
+function MyButton() {
+  return (
+    <a
+      href="http://localhost:3000"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
+    >
+      Buka Halaman
+    </a>
+  );
+}
+
+const user = {
+  name: 'Fulanah bin Fulan',
+  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+  imageSize: 90,
+};
+
+function Profile() {
+  return (
+    <>
+      <div className="text-xs">Developed by: {user.name}</div>
+      <img
+        className="rounded-full"
+        src={user.imageUrl}
+        alt={'Foto ' + user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize
+        }}
+      />
+    </>
+  );
+}
+
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -22,7 +58,6 @@ export default function Home() {
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
-
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
@@ -47,7 +82,9 @@ export default function Home() {
           >
             Read our docs
           </a>
+          <MyButton />
         </div>
+        <Profile />
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
