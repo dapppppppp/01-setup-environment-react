@@ -78,7 +78,7 @@ Kelas : TI - 3C
 
 1. Buktikan dengan screenshoot yang menunjukkan bahwa tahapan percobaan di atas telah berhasil Anda lakukan!
 
-> ![alt text](assets-report/p2.png)
+> ![alt text](asset/p2.png)
 
 ### Praktikum 4: Menulis Markup dengan JSX
 
